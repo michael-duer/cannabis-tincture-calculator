@@ -1,0 +1,41 @@
+.navbar-default {
+  background-color: #03AD36;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  background-color: #03C03C;
+}
+.result-container {
+  margin-left: 5rem;
+}
+i {
+  margin-left: 1rem;
+}
+.tincture-image {
+  height: 20rem;
+  float: left;
+  margin: 2rem 2rem 0 0;
+}
+.activeCanabinol, .strength {
+  height: 5rem;
+  margin-left: 2rem;
+}
+.flask {
+  height: 5rem;
+  margin-left: 0rem;
+}
+
+#tinctureSize {
+  margin-top: 5rem;
+}
+#tinctureConcentration, #tinctureContent {
+  margin-top: 2rem;
+}
+
+#tinctureSize, #tinctureConcentration, #tinctureContent {
+  margin-left: 10rem;
+}
+@media screen and (max-width: 770px){
+  .result-container {
+    margin-left: 0rem;
+  }
+}
