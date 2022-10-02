@@ -4,35 +4,40 @@
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
   background-color: #03C03C;
 }
+.main-container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .result-container {
-  margin-left: 5rem;
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-row: auto auto;
+}
+.result-data {
+  margin: 3rem 0;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
 }
 i {
   margin-left: 1rem;
 }
 .tincture-image {
-  height: 20rem;
-  float: left;
-  margin: 2rem 2rem 0 0;
+  height: 25rem;
+ /* float: right;
+  margin: 2rem auto 0 2rem; */
 }
-.activeCanabinol, .strength {
+.activeCanabinol, .strength, .flask {
   height: 5rem;
-  margin-left: 2rem;
+  margin-bottom: 2rem;
 }
-.flask {
-  height: 5rem;
-  margin-left: 0rem;
-}
-
-#tinctureSize {
-  margin-top: 5rem;
-}
-#tinctureConcentration, #tinctureContent {
-  margin-top: 2rem;
-}
-
-#tinctureSize, #tinctureConcentration, #tinctureContent {
-  margin-left: 10rem;
+img > .drop {
+  height: 1rem;
 }
 @media screen and (max-width: 770px){
   .result-container {
