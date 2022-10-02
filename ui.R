@@ -33,13 +33,35 @@ fluidPage(theme = shinytheme("flatly"),
                     
                 ), # sidebarPanel
                 mainPanel(#style="display:flex;justify-content:center;",
-                    HTML('<div class="result-container">'),
                     h1("Cannabis Tincture",icon("cannabis")),
                     
-                    img(src='cannabis-oil.png', class="tincture-image"),
-                    htmlOutput("tinctureSize"),
-                    htmlOutput("tinctureConcentration"),
-                    htmlOutput("tinctureContent"),
+                    HTML('<div class="main-container">'),
+                      img(src='cannabis-oil.png', class="tincture-image"),
+                    
+                      HTML('<div class="result-container">'),
+                    
+                        HTML('<div class="result-data">'),
+                          img(src='flask.png', class="flask"),
+                          htmlOutput("tinctureSize"),
+                        HTML('</div>'),
+                    
+                        HTML('<div class="result-data">'),
+                          img(src='strength.png', class="strength"),
+                          htmlOutput("tinctureConcentration"),
+                        HTML('</div>'), 
+                    
+                        HTML('<div class="result-data">'),
+                          img(src='cbd.png', class="activeCanabinol"),
+                          htmlOutput("tinctureContent"),
+                        HTML('</div>'),
+                    
+                        HTML('<div class="result-data">'),
+                          img(src='drop.png', class="drop", style="height:5rem;"),
+                          htmlOutput("tinctureContentPerMl"),
+                        HTML('</div>'),
+                    
+                      HTML('</div>'),
+                    
                     HTML('</div>')
                     
                 ) # mainPanel
