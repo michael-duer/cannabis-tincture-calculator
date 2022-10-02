@@ -41,22 +41,22 @@ fluidPage(theme = shinytheme("flatly"),
                       HTML('<div class="result-container">'),
                     
                         HTML('<div class="result-data">'),
-                          img(src='flask.png', class="flask"),
+                          img(src='flask.png', class="icon flask"),
                           htmlOutput("tinctureSize"),
                         HTML('</div>'),
                     
                         HTML('<div class="result-data">'),
-                          img(src='strength.png', class="strength"),
+                          img(src='strength.png', class="icon strength"),
                           htmlOutput("tinctureConcentration"),
                         HTML('</div>'), 
                     
                         HTML('<div class="result-data">'),
-                          img(src='cbd.png', class="activeCanabinol"),
-                          htmlOutput("tinctureContent"),
+                            uiOutput("moleculeIcon"),
+                            htmlOutput("tinctureContent"),
                         HTML('</div>'),
                     
                         HTML('<div class="result-data">'),
-                          img(src='drop.png', class="drop", style="height:5rem;"),
+                          img(src='drop.png', class="icon drop"),
                           htmlOutput("tinctureContentPerMl"),
                         HTML('</div>'),
                     

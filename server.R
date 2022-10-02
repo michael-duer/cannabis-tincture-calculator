@@ -49,6 +49,13 @@ shinyServer(function(input, output) {
     }
   })
   
+  # molecule icon
+  output$moleculeIcon <- renderUI({
+    switch (input$selectedCannabinol,
+      "CBD" = img(src='cbd-molecule.svg', class="icon activeCanabinol"),
+      "THC" = img(src='thc-molecule.svg', class="icon activeCanabinol")
+    )
+  })
   # mg per drop (1ml)
   output$tinctureContentPerMl <- renderText({ 
     if(!is.na(input$weightFlower) && !is.na(input$concentrationFlower) && !is.na(input$weightSolvent)){
