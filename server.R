@@ -1,6 +1,7 @@
 ######################
 #      Server        #  
 ######################
+
 library(markdown)
 
 shinyServer(function(input, output) {
@@ -48,7 +49,6 @@ shinyServer(function(input, output) {
       paste("Total amount of ",input$selectedCannabinol," in mg")
     }
   })
-  
   # molecule icon
   output$moleculeIcon <- renderUI({
     switch (input$selectedCannabinol,
@@ -59,9 +59,9 @@ shinyServer(function(input, output) {
   # mg per drop (1ml)
   output$tinctureContentPerMl <- renderText({ 
     if(!is.na(input$weightFlower) && !is.na(input$concentrationFlower) && !is.na(input$weightSolvent)){
-      paste(cannabidiolAmountPerDrop()," mg of ",input$selectedCannabinol," per drop (1ml)") 
+      paste(round(cannabidiolAmountPerDrop(),4)," mg/ml of ",input$selectedCannabinol) 
     }else {
-      paste(" mg per drop (1ml)")
+      paste(" mg per per ml")
     }
   })
 })

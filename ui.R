@@ -33,11 +33,10 @@ fluidPage(theme = shinytheme("flatly"),
                     
                 ), # sidebarPanel
                 mainPanel(#style="display:flex;justify-content:center;",
-                    h1("Cannabis Tincture",icon("cannabis")),
+                    h1("Cannabis Tincture",img(src='cannabis-oil.png', class="tincture-image")),
                     
                     HTML('<div class="main-container">'),
-                      img(src='cannabis-oil.png', class="tincture-image"),
-                    
+                      
                       HTML('<div class="result-container">'),
                     
                         HTML('<div class="result-data">'),

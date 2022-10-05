@@ -1,17 +1,49 @@
+:root {
+  --navbar: #2A9134;/*#03AD36*/
+  --navbar-hover: #3FA34D;/*#03C03C*/
+  --side-panel: rgba(42, 145, 52, 0.7); /*#2A9134;*/
+  --side-panel-text-color: #000;
+}
+body {
+  background-color: #fff;
+}
 .navbar-default {
-  background-color: #03AD36;
+  background-color: var(--navbar);
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-  background-color: #03C03C;
+  background-color: var(--navbar-hover);
+}
+span.navbar-brand {
+  padding-left: 2rem;
+}
+h1 {
+  text-align: center;
+  font-size: 4vw;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+h3 {
+  font-size: 2rem;
+  margin-top: 0rem;
+}
+h3, label, span, p {
+  color: var(--side-panel-text-color);
+}
+.well {
+  background-color: var(--side-panel);
+  
 }
 .main-container {
-  margin-top: 10%; /*5rem*/
+  /*margin-top: 10%; 5rem*/
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
 .result-container {
-  width:100%;
   height:100%;
   display:grid;
   grid-template-columns: 20rem 20rem;
@@ -25,11 +57,10 @@
   justify-content:center;
   flex-direction: column;
 }
-i {
-  margin-left: 1rem;
-}
 .tincture-image {
-  height: 25rem;
+  height: 10vw;
+  max-height: 10rem;
+  margin-top: -3vw;
  /* float: right;
   margin: 2rem auto 0 2rem; */
 }
@@ -45,8 +76,92 @@ i {
 img > .drop {
   height: 1rem;
 }
-@media screen and (max-width: 770px){
+@media screen and (max-width: 1050px){
+  .main-container {
+    flex-direction: column;
+  }
+  .tincture-image {
+    margin-top: -4vw;
+  }
+@media screen and (max-width: 768px){
   .result-container {
     margin-left: 0rem;
+  }
+ /*
+ .col-sm-4 {
+    width: 40%;
+  }
+  .col-sm-8 {
+    width: 50%; 
+  } 
+  .tab-content>.active {
+    display: flex;
+  }
+*/
+}
+@media screen and (max-width: 780px){
+  h1 {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 750px){
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .tincture-image {
+    height: 5rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .result-container {
+    grid-template-columns: 50% 50%;
+    padding-bottom: 3rem;
+  }
+  #tinctureSize, #tinctureConcentration, #tinctureContent, #tinctureContentPerMl {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 400px){
+  h1 {
+    max-width: 20rem;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .tincture-image {
+    min-height: 5rem;
+    margin-top: 1rem;
+  }
+  #tinctureSize, #tinctureConcentration, #tinctureContent, #tinctureContentPerMl {
+    max-width: 10rem;
+    text-align: center;
+  }
+  #tinctureContent {
+    margin-bottom: -2.7rem;
+  }
+  .icon.activeCanabinol {
+    height: 5rem;
+  }
+  .icon {
+    height: 5rem;
+  }
+  .col-sm-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 340px){
+  #tinctureSize, #tinctureConcentration, #tinctureContent, #tinctureContentPerMl {
+    max-width: 10rem;
+    text-align: center;
+  }
+  .icon.activeCanabinol {
+    height: 5rem;
+  }
+  .icon {
+    height: 5rem;
   }
 }

@@ -5,7 +5,10 @@ account: my-collection-of
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7118991
-bundleId: 6338199
+bundleId: 6373163
 url: https://my-collection-of.shinyapps.io/cannabis-tincture-calculator/
-when: 1664186729.54005
-lastSyncTime: 1664186729.54006
+when: 1665001205.03508
+lastSyncTime: 1665001205.03509
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: cbd-molecule.xcf|thc-molecule.xcf|webscreaping-hanftheke.R
